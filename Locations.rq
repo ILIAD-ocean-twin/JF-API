@@ -10,10 +10,20 @@
 #+ transform: {
 #+   "description": "?info",
 #+   "$anchor": "description",
+#+   "@iot.count": "?total",
+#+   "@iot.nextLink": "?next_link",
 #+   "value": {
 #+     "@iot.id": "?location",
+#+     "@iot.selfLink": "?id_link",
 #+     "description": "?name",
 #+     "name": "?name",
+#+     "encodingType": "?enc_type",
+#+     "location": {
+#+       "coordinates": "?cords$list",
+#+       "type": "?geo_type",
+#+       },
+#+     "Things@iot.navigationLink": "?things_link",
+#+     "HistoricalLocations@iot.navigationLink": "?hlocs_link",
 #+     },
 #+   }
 
@@ -29,7 +39,6 @@ PREFIX oim-jf:  <http://w3id.org/iliad/oim/jellyfish#>
 
 
 SELECT ?sensor ?info ?enc_type ?name ?things_link ?hlocs_link ?next_link ?total ?geo_type ?cords ?location
-#SELECT ?sensor ?info ?name ?location
 WHERE {
     ?s a sosa:FeatureOfInterest ;
         a ?type ;
