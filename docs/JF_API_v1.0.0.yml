@@ -70,16 +70,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
           description: can be used as a page number followed by two zeros
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
