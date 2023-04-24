@@ -73,7 +73,7 @@ paths:
             default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
@@ -220,16 +220,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -308,16 +306,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -461,16 +457,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -549,16 +543,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -594,16 +586,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -682,16 +672,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -727,16 +715,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -815,16 +801,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -860,16 +844,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -948,16 +930,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -1000,16 +980,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -1081,16 +1059,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -1169,16 +1145,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
@@ -1250,16 +1224,14 @@ paths:
           required: true
           schema:
             type: integer
-            enum:
-              - 100
+            default: 100
         - name: $skip
           in: query
-          description: can be used as a page number followed by two zeros
+          description: the number of records that should be skipped
           required: true
           schema:
             type: integer
-            minimum: 100
-            default: 100
+            default: 0
       responses:
         '200':
           description: successful operation
