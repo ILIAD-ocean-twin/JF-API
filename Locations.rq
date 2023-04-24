@@ -44,7 +44,7 @@ WHERE {
         a ?type ;
         wgs84:lat ?lat ;
         wgs84:long ?long .
-        FILTER (?type != URI('http://www.w3.org/ns/sosa/FeatureOfInterest'))
+        FILTER (?type != URI('http://www.w3.org/ns/sosa/FeatureOfInterest') && ?type != URI('http://purl.org/dc/terms/Location'))
     ?s3 sosa:hasFeatureOfInterest ?s ;
         sosa:resultTime ?res1 ;
         sosa:madeBySensor ?sensor .
