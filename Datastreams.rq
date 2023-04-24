@@ -4,7 +4,8 @@
 #+ tags:
 #+   - json
 #+ method: GET
-#+ pagination: 100
+#+ limit: 100
+#+ offset: 0
 #+ endpoint_in_url: False
 #+ transform: {
 #+   "description": "?info",
@@ -68,8 +69,7 @@ WHERE {
             }  
         }
     }
-    OPTIONAL { ?s ?p ?_page_integer } 
-    BIND (URI(CONCAT('https://w3id.org/iliad/jf/api/v1.0/Datastreams?$top=100&$skip=', (?_page_integer+1)*100)) AS ?next_link)
+    BIND (URI(CONCAT('https://w3id.org/iliad/jf/api/v1.0/Datastreams?$top=',xsd:integer(?_limit),'$skip=', xsd:integer(COALESCE(?_offset, 0))+xsd:integer(?_limit))) AS ?next_link)
 } 
 GROUP BY ?sensor ?obs_property
 ORDER BY ?id
