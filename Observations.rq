@@ -4,7 +4,8 @@
 #+ tags:
 #+   - json
 #+ method: GET
-#+ pagination: 100
+#+ limit: 100
+#+ offset: 0
 #+ endpoint_in_url: False
 #+ transform: {
 #+   "description": "?info",
@@ -63,7 +64,6 @@ WHERE {
        SELECT (count(*) as ?total) WHERE { ?x a sosa:Observation }
 
     }
-    OPTIONAL { ?s ?p ?_page } 
-    BIND (URI(CONCAT('https://w3id.org/iliad/jf/api/v1.0/Observations?$top=100&$skip=', (xsd:integer(?_page)+1)*100)) AS ?next_link)
+    BIND (URI(CONCAT('https://w3id.org/iliad/jf/api/v1.0/Observations?$top=',xsd:integer(?_limit),'$skip=', xsd:integer(COALESCE(?_offset, 0))+xsd:integer(?_limit))) AS ?next_link)
 }
 ORDER BY ?id
