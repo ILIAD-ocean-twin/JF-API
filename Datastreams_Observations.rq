@@ -37,6 +37,7 @@ PREFIX sosa:  <http://www.w3.org/ns/sosa/>
 PREFIX oim-jf:  <http://w3id.org/iliad/oim/jellyfish#> 
 PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dwc-mbg: <http://mmisw.org/ont/ioos/marine_biogeography/>
 
 SELECT DISTINCT ?info ?id ?id_link ?resultTime ?phenomenonTime ?densityOfJF ?quantityOfJF ?sampleSizeValue ?scientificName ?wormsConcept ?stingByJF ?beachedJF ?datastream_link ?feature_link ?total ?next_link
 WHERE {
@@ -50,10 +51,10 @@ WHERE {
 			sosa:hasResult ?result .
     OPTIONAL {
       ?result oim-jf:densityOfJF ?densityOfJF ;
-        oim-jf:quantityOfJF ?quantityOfJF ; 
+        dwc:individualCount ?quantityOfJF ; 
 			  dwc:sampleSizeValue ?sampleSizeValue ;
 			  dwc:scientificName ?scientificName ;
-			  oim-jf:wormsConcept ?wormsConcept ;
+			  dwc-mbg:aphiaID ?wormsConcept ;
         oim-jf:stingByJF ?stingByJF ;
 	      oim-jf:beachedJF ?beachedJF .
     }
